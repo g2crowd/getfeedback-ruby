@@ -20,6 +20,10 @@ module Getfeedback
           def path(id = nil)
             id ? "#{@path}/#{id}" : @path
           end
+
+          def object_from_data(json)
+            json
+          end
         end
       end
 

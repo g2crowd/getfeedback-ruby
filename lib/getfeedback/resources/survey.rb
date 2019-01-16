@@ -9,5 +9,9 @@ module Getfeedback
     def self.array_from_data(json)
       json[:surveys]
     end
+
+    def self.object_from_data(json)
+      json[:survey]
+    end
   end
 end
