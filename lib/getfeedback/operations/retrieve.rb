@@ -12,8 +12,10 @@ module Getfeedback
       module Pluralton
         module ClassMethods
           def retrieve(id, opts = {}, client = Getfeedback.shared_client)
+            return unless id
             opts = Utils.serialize_values(opts)
             json = client.get_json(path(id), opts)
+            json = object_from_data(json)
             new(json)
           end
 
