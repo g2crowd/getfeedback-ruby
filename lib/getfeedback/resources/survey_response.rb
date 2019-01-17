@@ -10,5 +10,9 @@ module Getfeedback
     def self.array_from_data(json)
       json[:active_models]
     end
+
+    def self.object_from_data(json)
+      json[:response]
+    end
   end
 end
